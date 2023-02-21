@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Lexend:wght@100;200;300;400;500&family=Life+Savers:wght@800&display=swap");
+
+.title {
+  color: white;
+  font-family: "Life Savers", cursive;
+  font-weight: 800;
+  font-size: 200px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  -webkit-text-stroke: 12px #afd76f;
+  text-shadow: 0px 20px 0px #00000073;
+  position: absolute;
+  top: 20%;
+}
+
+.startbutton {
+  -webkit-text-stroke: 3px #37a1c2;
+  color: white;
+  font-family: "Lemon", cursive;
+  width: 600px;
+  height: 200px;
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 0px 4px 2px #3ba3c399;
+  position: absolute;
+  top: 80%;
+  background: #abe6ea;
+  border-radius: 100px;
+  border: 15px solid #f6f6f6;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
+  left: 20%; /*how to make the button at the center of the page*/
+  cursor: pointer;
+}
+.startbutton:hover {
+  background-color: #37a1c2;
+  color: white;
+}
+/* 
+font-family: 'Lemon', cursive;
+font-family: 'Lexend', sans-serif;
+font-family: 'Life Savers', cursive; */
