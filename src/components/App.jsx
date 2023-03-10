@@ -14,8 +14,8 @@ function App() {
   return(
     <Router>
       <Routes>
-        {/* <Route path = "/" element={<Titlepage title ="Money Mojo" />}/> */}
-        <Route path = "/" element={<Level1Quiz
+        <Route path = "/" element={<Titlepage title ="Money Mojo" />}/>
+        <Route path = "/Level1Quiz" element={<Level1Quiz
         stage={0}/>}/>
         <Route path="/RegistrationPage" element={<RegistrationPage/>} />
         <Route path="/MapPage" element={<MapPage/>} />

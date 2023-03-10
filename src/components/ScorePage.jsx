@@ -5,10 +5,12 @@ import Stars from "./Stars";
 import HomeBtn from "../assets/HomeBtn.svg";
 import ReplayBtn from "../assets/ReplayBtn.svg";
 import ContinueBtn from "../assets/ContinueBtn.svg";
+import { useAuthContext } from "../firebase/useAuthContext";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 
 function ScorePage() {
+  const {user} = useAuthContext()
   const score= useLocation()["state"].score
   const level= useLocation()["state"].level
   const navigate = useNavigate();
@@ -24,6 +26,7 @@ function ScorePage() {
   }
   function saveScore(){
     //get user, update score and send to database
+    console.log('user')
   }
   var starCount=[0,0,0];
   if (score==5){

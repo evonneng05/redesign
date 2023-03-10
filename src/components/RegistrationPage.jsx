@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import RegistrationBackground from "../assets/Background.svg";
 import Dino from "../assets/Dino.svg";
 import { useNavigate } from "react-router-dom";
-
+import { useSignup } from "../firebase/useSignup";
 function RegistrationPage() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
-
+  const {error,signup}= useSignup()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Name: ", name);
+    var email= `${name}@gmail.com`
+    //signup(email,'password')
     navigate("/MapPage");
   };
 
