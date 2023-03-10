@@ -21,7 +21,6 @@ function Titlepage(props) {
       <button className="startbutton bg-[#ABE6EA]" type="button" onClick={handleClick}>
         Let's Go
       </button>
-      <Functions/>
     </div>
   );
 }
