@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lemon&family=Lexend:wght@100;200;300;400;500&family=Life+Savers:wght@800&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 .title {
   color: white;
   font-family: "Life Savers", cursive;

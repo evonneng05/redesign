@@ -5,12 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 function Titlepage(props) {
   const navigate = useNavigate();
-  // const changePage = ()=>{
-  //   const navigate = useNavigate();
-  // }
   function handleClick() {
     // alert("working");
-    navigate("/MapPage");
+    navigate("/RegistrationPage");
   }
   return (
     <div
