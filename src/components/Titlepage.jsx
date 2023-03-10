@@ -8,7 +8,6 @@ import Functions from "../firebase/Functions";
 function Titlepage(props) {
   const navigate = useNavigate();
   function handleClick() {
-    // alert("working");
     navigate("/RegistrationPage");
   }
   return (
