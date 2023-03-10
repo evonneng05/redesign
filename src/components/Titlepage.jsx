@@ -18,7 +18,7 @@ function Titlepage(props) {
       }}
     >
       <h1 className="title">{props.title} </h1>
-      <button className="startbutton bg-blue-200" type="button" onClick={handleClick}>
+      <button className="startbutton bg-[#ABE6EA]" type="button" onClick={handleClick}>
         Let's Go
       </button>
       <Functions/>
