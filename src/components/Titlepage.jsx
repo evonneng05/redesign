@@ -1,14 +1,13 @@
 import React from "react";
 import Background from "../assets/Background.svg"
 import { useCollection } from '../firebase/useCollection'
-import Functions from "../firebase/functions";
+import Functions from "../firebase/Functions";
 
 
 function Titlepage(props) {
-  const {documents: users} = useCollection('users')
+  
 
   function handleClick() {
-    //console.log(users[0]['name']);
     //console.log(users[0]['score']);
   }
   return (

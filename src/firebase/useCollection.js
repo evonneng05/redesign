@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import {db} from '../firebase/config'
+import {db} from './config'
 
 
 import {collection, onSnapshot, query, where} from 'firebase/firestore'
@@ -7,7 +7,7 @@ import {collection, onSnapshot, query, where} from 'firebase/firestore'
 export const useCollection=(c, _q)=>{
     const [documents, setDocuments]=useState(null);
 
-    //set up qeury
+    //set up query
     const q= useRef(_q).current//handle references
 
     useEffect(()=>{
