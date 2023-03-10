@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import RegistrationBackground from "../assets/Background.svg";
+import RegistrationBackground from "../assets/TransparentBG.svg";
 import Dino from "../assets/Dino.svg";
 import { useNavigate } from "react-router-dom";
 import { useSignup } from "../firebase/useSignup";
+import { motion } from "framer-motion";
+
 function RegistrationPage() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
@@ -20,6 +22,14 @@ function RegistrationPage() {
   };
 
   return (
+    <motion.div
+    className="container text-center  bg-black"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
+
     <div
       className="backgroundTransparent"
       style={{
@@ -60,7 +70,8 @@ function RegistrationPage() {
                 <button
                   type="submit"
                   className="continue-text bg-[#B5D76E] hover:bg-[#B5D76E] text-white font-bold py-2 px-4 rounded-full mt-4 border-8 border-white border-solid"
-                  style={{ marginTop: "50%", width: "75%" }}
+                  style={{ marginTop: "50%", width: "75%", display: name ? "block": "none"}}
+                  disabled={!name}
                 >
                   Continue
                 </button>
@@ -70,6 +81,7 @@ function RegistrationPage() {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
 
