@@ -2,6 +2,7 @@ import React from "react";
 import Map from "../assets/Map.svg";
 import LevelTag from "./LevelTag";
 function MapPage() {
+
   return (
     <div className="background" style={{ backgroundImage: `url(${Map})` }}>
       <LevelTag number="1" left="45%" top="73%" />
