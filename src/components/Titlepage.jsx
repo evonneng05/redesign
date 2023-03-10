@@ -1,6 +1,8 @@
 import React from "react";
 import Background from "../assets/Background.svg";
 import { useNavigate } from "react-router-dom";
+import { useCollection } from '../firebase/useCollection'
+import Functions from "../firebase/Functions";
 
 
 function Titlepage(props) {
@@ -8,16 +10,6 @@ function Titlepage(props) {
   function handleClick() {
     // alert("working");
     navigate("/RegistrationPage");
-import Background from "../assets/Background.svg"
-import { useCollection } from '../firebase/useCollection'
-import Functions from "../firebase/Functions";
-
-
-function Titlepage(props) {
-  
-
-  function handleClick() {
-    //console.log(users[0]['score']);
   }
   return (
     <div
