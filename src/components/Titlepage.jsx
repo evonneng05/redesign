@@ -1,8 +1,14 @@
 import React from "react";
-import Background from "../assets/Background.svg";
+import Background from "../assets/Background.svg"
+import { useCollection } from '../firebase/useCollection'
+import Functions from "../firebase/Functions";
+
+
 function Titlepage(props) {
+  
+
   function handleClick() {
-    alert("working");
+    //console.log(users[0]['score']);
   }
   return (
     <div
@@ -15,6 +21,7 @@ function Titlepage(props) {
       <button className="startbutton" type="button" onClick={handleClick}>
         Let's Go
       </button>
+      <Functions/>
     </div>
   );
 }
