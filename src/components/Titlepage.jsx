@@ -1,8 +1,16 @@
 import React from "react";
 import Background from "../assets/Background.svg";
+import { useNavigate } from "react-router-dom";
+
+
 function Titlepage(props) {
+  const navigate = useNavigate();
+  // const changePage = ()=>{
+  //   const navigate = useNavigate();
+  // }
   function handleClick() {
-    alert("working");
+    // alert("working");
+    navigate("/MapPage");
   }
   return (
     <div
