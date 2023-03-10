@@ -30,7 +30,7 @@ body {
   text-shadow: 0px 4px 2px #3ba3c399;
   position: absolute;
   top: 80%;
-  background: #abe6ea;
+  /* background: #abe6ea; */
   border-radius: 100px;
   border: 15px solid #f6f6f6;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
