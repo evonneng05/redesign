@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path = "/" element={<Titlepage title ="Money Mojo" />}/>
         <Route path="/RegistrationPage" element={<RegistrationPage/>} />
+        <Route path="/MapPage" element={<MapPage />} />
       </Routes>
     </Router>
 

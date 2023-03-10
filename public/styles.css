@@ -198,6 +198,18 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.continue-text{
+  -webkit-text-stroke: 3px #6BAF33;
+  color: white;
+  font-family: "Lemon", cursive;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 0px 4px 2px #3ba3c399;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .inner-border {
   position: absolute;
   top: 8px;
