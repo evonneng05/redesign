@@ -3,7 +3,10 @@ import Titlepage from "./Titlepage";
 import LevelTag from "./LevelTag";
 import MapPage from "./MapPage";
 import ScorePage from "./ScorePage";
+import Level1Quiz from "./Level1Quiz";
 import Level2Page from "./Level_2/Level2Page"
+
+
 import { UserRecords } from "../firebase/UserRecordsObject";
 import RegistrationPage from "./RegistrationPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -21,7 +24,6 @@ function App() {
         <Route path="/ScorePage" element={<ScorePage/>} />
       </Routes>
     </Router>
-
   );
 }
 
