@@ -6,7 +6,7 @@ import HomeBtn from "../assets/HomeBtn.svg";
 import ReplayBtn from "../assets/ReplayBtn.svg";
 import ContinueBtn from "../assets/ContinueBtn.svg";
 
-function ScorePage() {
+function ScorePage(props) {
   function homeClick() {
     alert("Home button working");
   }
@@ -16,6 +16,14 @@ function ScorePage() {
   function nextClick() {
     alert("Continue button working");
   }
+  var starCount=[0,0,0];
+  if (props.score>5){
+    starCount=[1,1,1];
+  }else if (props.score>2){
+    starCount=[1,1,0];
+  }else if (props.score>0){
+    starCount=[1,0,0];
+  }
   return (
     <div
       className="background sp-bg"
@@ -23,12 +31,14 @@ function ScorePage() {
     >
       <div className="center-container">
         <img className="score-bg" src={ScoreBackground} alt="ScoreBackground" />
-        <Stars />
+        <Stars
+          count={starCount}
+        />
       </div>
-      <div className="level-title">Level 1</div>
+      <div className="level-title">Level {props.level}</div>
       <div className="score">Score</div>
-      <div className="score-num">5/5</div>
-      <div className="success-msg">Complete!</div>
+      <div className="score-num">{props.score}/5</div>
+      <div className="success-msg">{props.score==5?'Complete!':'Try Again!'}</div>
       <div className="btn-container">
         <div className="btn-center">
           <button

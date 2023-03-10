@@ -1,13 +1,14 @@
 import React from "react";
 import StarFilled from "../assets/StarFilled.svg";
-import StarEmpty from "../assets/StarFilled.svg";
+import StarEmpty from "../assets/StarEmpty.svg";
 
-function Stars() {
+function Stars(props) {
+  const StarElement=props.count.map((value)=>
+    <img className="star" src={value==1?StarFilled:StarEmpty} alt="Star1" />
+  );
   return (
     <div className="star-container">
-      <img className="star" src={StarFilled} alt="Star1" />
-      <img className="star" src={StarFilled} alt="Star2" />
-      <img className="star" src={StarFilled} alt="Star3" />
+      {StarElement}
     </div>
   );
 }
