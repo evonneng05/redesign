@@ -5,16 +5,19 @@ import Stars from "./Stars";
 import HomeBtn from "../assets/HomeBtn.svg";
 import ReplayBtn from "../assets/ReplayBtn.svg";
 import ContinueBtn from "../assets/ContinueBtn.svg";
+import { useNavigate } from "react-router-dom";
+
 
 function ScorePage(props) {
+  const navigate = useNavigate();
   function homeClick() {
-    alert("Home button working");
+    navigate("/MapPage"); //map
   }
   function replayClick() {
-    alert("Replay button working");
+    navigate("/MapPage"); //TODO
   }
   function nextClick() {
-    alert("Continue button working");
+    navigate("/MapPage"); //TODO
   }
   var starCount=[0,0,0];
   if (props.score>5){
