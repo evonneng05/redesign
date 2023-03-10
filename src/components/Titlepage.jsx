@@ -1,8 +1,12 @@
 import React from "react";
-import Background from "../assets/Background.svg";
+import Background from "../assets/Background.svg"
+import {useFetch} from '../hooks/useFetch'
+
+
 function Titlepage(props) {
+  const {data: users, isPending, error}= useFetch('http://localhost:3000/user')
   function handleClick() {
-    alert("working");
+    alert(users['timmy']);
   }
   return (
     <div
