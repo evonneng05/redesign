@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import level1 from "../level1";
+import { useNavigate } from "react-router-dom";
 
 function Level1Quiz() {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -7,7 +8,7 @@ function Level1Quiz() {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const [result, setResult] = useState(0);
-
+  const navigate = useNavigate();
   const { question, choices, answer } = level1[activeQuestion];
   const onClickNext = () => {
     setSelectedAnswerIndex(null);
@@ -29,7 +30,7 @@ function Level1Quiz() {
     }
   };
   function completeLevel() {
-    console.log(result);
+    navigate("/ScorePage", {state:{score: result, level:1}});
   }
   return (
     <div>
