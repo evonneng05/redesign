@@ -8,6 +8,16 @@ function Titlepage(props) {
   function handleClick() {
     // alert("working");
     navigate("/RegistrationPage");
+import Background from "../assets/Background.svg"
+import { useCollection } from '../firebase/useCollection'
+import Functions from "../firebase/Functions";
+
+
+function Titlepage(props) {
+  
+
+  function handleClick() {
+    //console.log(users[0]['score']);
   }
   return (
     <div
@@ -20,6 +30,7 @@ function Titlepage(props) {
       <button className="startbutton bg-blue-200" type="button" onClick={handleClick}>
         Let's Go
       </button>
+      <Functions/>
     </div>
   );
 }
