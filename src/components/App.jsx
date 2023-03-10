@@ -15,7 +15,7 @@ function App() {
         {/* <Route path = "/" element={<Titlepage title ="Money Mojo" />}/> */}
         <Route path = "/" element={<ScorePage score= {score}level={level}/>}/>
         <Route path="/RegistrationPage" element={<RegistrationPage/>} />
-        <Route path="/MapPage" element={<MapPage/>} />
+        <Route path="/MapPage" element={<MapPage />} />
       </Routes>
     </Router>
 
