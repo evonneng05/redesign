@@ -1,12 +1,15 @@
 import React from "react";
 import Background from "../assets/Background.svg"
-import {useFetch} from '../hooks/useFetch'
+import { useCollection } from '../firebase/useCollection'
+import Functions from "../firebase/functions";
 
 
 function Titlepage(props) {
-  const {data: users, isPending, error}= useFetch('http://localhost:3000/user')
+  const {documents: users} = useCollection('users')
+
   function handleClick() {
-    alert(users['timmy']);
+    //console.log(users[0]['name']);
+    //console.log(users[0]['score']);
   }
   return (
     <div
@@ -23,6 +26,7 @@ function Titlepage(props) {
       <button className="startbutton" type="button" onClick={handleClick}>
         Let's Go
       </button>
+      <Functions/>
     </div>
   );
 }
