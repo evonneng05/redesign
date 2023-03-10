@@ -5,11 +5,14 @@ import Stars from "./Stars";
 import HomeBtn from "../assets/HomeBtn.svg";
 import ReplayBtn from "../assets/ReplayBtn.svg";
 import ContinueBtn from "../assets/ContinueBtn.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 
-function ScorePage(props) {
+function ScorePage() {
+  const score= useLocation()["state"].score
+  const level= useLocation()["state"].level
   const navigate = useNavigate();
+
   function homeClick() {
     navigate("/MapPage"); //map
   }
@@ -19,12 +22,15 @@ function ScorePage(props) {
   function nextClick() {
     navigate("/MapPage"); //TODO
   }
+  function saveScore(){
+    //get user, update score and send to database
+  }
   var starCount=[0,0,0];
-  if (props.score>5){
+  if (score==5){
     starCount=[1,1,1];
-  }else if (props.score>2){
+  }else if (score>2){
     starCount=[1,1,0];
-  }else if (props.score>0){
+  }else if (score>0){
     starCount=[1,0,0];
   }
   return (
@@ -38,10 +44,10 @@ function ScorePage(props) {
           count={starCount}
         />
       </div>
-      <div className="level-title">Level {props.level}</div>
+      <div className="level-title">Level {level}</div>
       <div className="score">Score</div>
-      <div className="score-num">{props.score}/5</div>
-      <div className="success-msg">{props.score==5?'Complete!':'Try Again!'}</div>
+      <div className="score-num">{score}/5</div>
+      <div className="success-msg">{score==5?'Complete!':'Try Again!'}</div>
       <div className="btn-container">
         <div className="btn-center">
           <button

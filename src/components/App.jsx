@@ -3,6 +3,7 @@ import Titlepage from "./Titlepage";
 import LevelTag from "./LevelTag";
 import MapPage from "./MapPage";
 import ScorePage from "./ScorePage";
+import Level2Page from "./Level_2/Level2Page"
 import { UserRecords } from "../firebase/UserRecordsObject";
 import RegistrationPage from "./RegistrationPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -13,9 +14,11 @@ function App() {
     <Router>
       <Routes>
         {/* <Route path = "/" element={<Titlepage title ="Money Mojo" />}/> */}
-        <Route path = "/" element={<ScorePage score= {score}level={level}/>}/>
+        <Route path = "/" element={<Level2Page
+        stage={0}/>}/>
         <Route path="/RegistrationPage" element={<RegistrationPage/>} />
-        <Route path="/MapPage" element={<MapPage />} />
+        <Route path="/MapPage" element={<MapPage/>} />
+        <Route path="/ScorePage" element={<ScorePage/>} />
       </Routes>
     </Router>
 
