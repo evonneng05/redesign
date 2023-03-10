@@ -47,6 +47,12 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.background_level_2{
+  background: linear-gradient(180deg, #F2EF96, #F7F4DE);
+  width: 100vw;
+  height: 100vh;
+}
+
 .background::before {
   content: '';
   position: absolute;
@@ -186,6 +192,7 @@ button {
   display: flex;
   justify-content: center;
 }
+
 .welcome-text{
   -webkit-text-stroke: 3px #1D6995;
   color: white;
@@ -219,6 +226,7 @@ button {
   border-radius: 20px;
   box-shadow: inset 0 0 0 4px #3693C7, inset 0 0 0 8px white;
 }
+
 
 /* 
 font-family: 'Lemon', cursive;
