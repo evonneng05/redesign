@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import level1 from "../level1";
 import { useNavigate } from "react-router-dom";
 
+
 function Level1Quiz() {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -10,6 +11,7 @@ function Level1Quiz() {
   const [result, setResult] = useState(0);
   const navigate = useNavigate();
   const { question, choices, answer } = level1[activeQuestion];
+  
   const onClickNext = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) => (selectedAnswer ? prev + 1 : prev));

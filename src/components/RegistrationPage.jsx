@@ -3,15 +3,27 @@ import RegistrationBackground from "../assets/Background.svg";
 import Dino from "../assets/Dino.svg";
 import { useNavigate } from "react-router-dom";
 import { useSignup } from "../firebase/useSignup";
+import { doc, setDoc } from 'firebase/firestore'
+import { useAuthContext } from "../firebase/useAuthContext";
+import {db} from '../firebase/config'
+
 function RegistrationPage() {
   const [name, setName] = useState("");
   const navigate = useNavigate();
   const {error,signup}= useSignup()
 
+  async function createUser(){
+    const ref=doc(db,'users',name)
+    await setDoc(ref,{
+      name: name,
+      score:[10,10,10,10,10],
+    })
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     var email= `${name}@gmail.com`
-    //signup(email,'password')
+    signup(email,'password');
+    createUser();
     navigate("/MapPage");
   };
 

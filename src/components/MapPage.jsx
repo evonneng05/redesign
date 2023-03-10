@@ -1,7 +1,16 @@
 import React from "react";
 import Map from "../assets/Map.svg";
 import LevelTag from "./LevelTag";
+import { useAuthContext } from "../firebase/useAuthContext";
+import {UserRecords} from '../firebase/UserRecordsObject';
+import {useDocument} from '../firebase/useDocument';
 function MapPage() {
+  const name= useAuthContext().user.email.split("@")[0]
+  console.log(name) //to access user's name
+  const {document: user}= useDocument('users',name)
+  console.log(user)
+
+
 
   return (
     <div className="background" style={{ backgroundImage: `url(${Map})` }}>
