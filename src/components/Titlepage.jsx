@@ -6,13 +6,9 @@ function Titlepage(props) {
   }
   return (
     <div
+      className="background"
       style={{
         backgroundImage: `url(${Background})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        width: "100vw",
-        height: "100vh",
       }}
     >
       <h1 className="title">{props.title}</h1>
