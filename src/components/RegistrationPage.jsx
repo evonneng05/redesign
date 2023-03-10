@@ -21,7 +21,7 @@ function RegistrationPage() {
 
   return (
     <div
-      className="background"
+      className="backgroundTransparent"
       style={{
         backgroundImage: `url(${RegistrationBackground})`,
       }}
