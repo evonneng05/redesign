@@ -1,15 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import {db} from './config'
-import {doc, onSnapshot,} from 'firebase/firestore'
+import {doc, onSnapshot,getDoc} from 'firebase/firestore'
 
-export const useDocument=(c,d)=>{
+export const  useDocument=async(c,d)=>{
     const [document, setDocument]=useState(null);
-    useEffect(()=>{
-        const unsub = onSnapshot(doc(db, c, d), (doc) => {
-            console.log("Current data: ", doc.data());
-            setDocument(doc.data())
-        });
-        return ()=>unsub()
-    },[c,d])
+    const docRef= doc(db, c, d)
+    const docSnap= await getDoc(docRef)
+    docSnap.exists()?setDocument(docSnap.data()): setDocument(null);
     return {document}
 }
